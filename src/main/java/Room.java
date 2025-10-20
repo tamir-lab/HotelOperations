@@ -45,11 +45,9 @@ public class Room {
         isDirty = dirty;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    public boolean isAvailable(boolean isOccupied, boolean isDirty) {
+        if (!isOccupied && !isDirty) {return isAvailable;}
+        else return !isAvailable;
     }
 
-    public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
 }
